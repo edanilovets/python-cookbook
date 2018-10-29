@@ -1,7 +1,7 @@
 from fnmatch import fnmatch, fnmatchcase
 
 fnmatch('foo.txt', '*.txt')
-fnmatch('Dat45.csv', 'Dat[0-9]*')
+fnmatch('Dat45.csv', 'Dat[0. Other-9]*')
 names = ['Dat1.csv', 'Dat2.csv', 'config.ini', 'foo.py']
 matches = [name for name in names if fnmatch(name, 'Dat*.csv')]
 print(matches)

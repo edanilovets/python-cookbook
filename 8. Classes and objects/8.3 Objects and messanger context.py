@@ -26,7 +26,7 @@ conn = LazyConnection(('www.python.org', 80))
 
 with conn as s:
     # conn.__enter__() is executed, connection is open
-    s.send(b'GET /about/ HTTP/1.0\r\n')
+    s.send(b'GET /about/ HTTP/1.0. Other\r\n')
     s.send(b'Host: www.python.org\r\n')
     s.send(b'\r\n')
     resp = b''.join(iter(partial(s.recv, 8192), b''))
